@@ -45,9 +45,9 @@ socratic_questioning = """Objective: Analyze the provided financial theory text 
 Instructions:  
 
 You will be given a passage of text related to financial theory or concepts.  
-Your task is to engage in a Socratic-style analysis by asking 3 thoughtful, probing questions about the text to explore its meaning, implications, and potential applications.  
-For each of the 3 question, provide an answer that reflects the intent and nuances of the financial theory, exploring both direct interpretations and deeper implications.  
-Structure the 3 questions to encourage critical thinking and gradually deepen understanding of the text, addressing definitions, assumptions, relationships between variables, potential scenarios, and broader implications.  
+Your task is to engage in a Socratic-style analysis by asking {num_count} thoughtful, probing questions about the text to explore its meaning, implications, and potential applications.  
+For each of the {num_count} question, provide an answer that reflects the intent and nuances of the financial theory, exploring both direct interpretations and deeper implications.  
+Structure the {num_count} questions to encourage critical thinking and gradually deepen understanding of the text, addressing definitions, assumptions, relationships between variables, potential scenarios, and broader implications.  
 Output only the Question and Answer pairs in the following format: "Question: [Your question here] Answer: [Your answer here]"  
 
 Example:  
@@ -72,11 +72,11 @@ question_answering_generation_from_facts="""Objective: Generate a set of synthet
 Instructions:  
 
 You will be given a paragraph containing factual information related to financial theory or concepts.  
-Your task is to generate 3 questions that reflect inquiries about financial principles, strategies, or implications. These should include straightforward factual questions as well as more nuanced questions that explore interpretations, assumptions, or potential consequences.  
+Your task is to generate {num_count} questions that reflect inquiries about financial principles, strategies, or implications. These should include straightforward factual questions as well as more nuanced questions that explore interpretations, assumptions, or potential consequences.  
 Provide concise, accurate answers based only on the information provided.  
-The 3 questions should vary in complexity, including basic fact identification, theoretical implications, practical applications, and broader considerations.
-The 3 questions and answers should vary in focus, depth, and length to demonstrate a range of understanding and analytical thinking.
-Do not mention or reference the paragraph of information in your 3 questions so that they can be answered independently.
+The {num_count} questions should vary in complexity, including basic fact identification, theoretical implications, practical applications, and broader considerations.
+The {num_count} questions and answers should vary in focus, depth, and length to demonstrate a range of understanding and analytical thinking.
+Do not mention or reference the paragraph of information in your {num_count} questions so that they can be answered independently.
 All answers should be one string without any line breaks.
 
 Example:  
@@ -173,12 +173,12 @@ Financial Theory to Use:
 {financial_text}
 """
 
-word_definition = """Objective: Extract 3 definitions of financial theory terms from the provided financial text.
+word_definition = """Objective: Extract {num_count} definitions of financial theory terms from the provided financial text.
 
 Instructions:
 
 You will be given a financial theory text that includes specific terms and concepts relevant to finance and economics.
-Identify and extract 3 definitions or explanations of the key financial terms used in the text.
+Identify and extract {num_count} definitions or explanations of the key financial terms used in the text.
 Provide concise, clear definitions for each term, based on how the term is used within the context of the financial text.
 If a term is not explicitly defined in the text, use the surrounding context to infer a reasonable definition.
 
